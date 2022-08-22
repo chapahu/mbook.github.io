@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap');
+
+html{ /*pour tout document html*/
+    scroll-behavior: smooth;   /*quand on scrool c'est smooth*/
+}
+
+body{
+    font-family: 'Advent Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{    /*pour tout les li*/
+    list-style-type: none;
+}
+h2{ /*"h2" pour tout les textes en h2 dans le html*/
+    text-transform: uppercase;  
+    text-align: center;
+    padding-top: 30px;   /*pour permettre de rien mettre autour du texte*/
+    font-size: 2em;      /*taille du texte*/
+}
+a{ /*"a" pour tout les liens*/
+    text-decoration: none;  /*pas de soulignage*/
+    color:black; /*couleur du lien*/
+}
+
+/* **************************BARRE DE NAVIGATION****************** */
+
+
+nav{
+    overflow: hidden;    /*tout se qui depasse sera caché*/
+    background-color:rgba(3, 7, 20, 0.784);
+    position: fixed;      /*elle restera toujours en haut*/
+    width: 100%;   /*largeur de 100%  */
+}
+
+header li {
+    float: right;
+    font-size: 1.4em; /*em est une taille qui s'adapte en fonction de l'ecran*/
+}
+
+header li a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px;    /*en haut/bas c'est 18 et droite/gauche c'est 16 */
+    color: rgb(65, 161, 95);
+
+}
+#logo {    /*quand on a un id, pour y toucher, on utilise #*/
+    font-family:'Dancing Script', cursive;
+    font-weight: bold;   /*en gras*/
+    float: left;    /* a gauche*/
+    color: rgb(65, 161, 95);
+}
+
+
+/* **********************IMAGE PRINCIPALE**************** */
+
+#imagePrincipale{
+    padding-top: 60px;
+    background: url(media/bibliotheque.jpg) no-repeat fixed 50% 50%;  /*50 50 pour couvrir l'ecran et fixed pour pas qu'elle bouge*/
+    background-size: cover; /*couvrir tout l'ecran*/
+    height: 700px;
+}
+h1{
+    font-family: 'Dancing Script', cursive;   /*police et cursive pour la police de secours*/
+    text-align: center;
+    color: rgb(65, 161, 95);
+    font-size: 6em;
+    margin-top: 40px;
+    text-shadow: 1px 2px 1px black;   /*ombre du texte : (taille de l'ombre, decalage de l'ombre, opacité de l'ombre) !!!possibilité de trouver des ombres sur un site d'ombre*/
+}
+
+#premierTrait{
+    height:1px;
+    width: 25%;  /*longueur du trait en fonction de l'ecran*/
+    margin: -3px auto;
+    background-color: rgb(65, 161, 95);
+    box-shadow: 1px 2px 1px black;
+}
+h3{
+    text-align: center;
+    color: rgb(65, 161, 95);
+    font-size: 3em;
+    text-shadow: 1px 2px 1px black;
+}
+
+/* *******************PRESENTATION************************ */
+
+#toutLesLivres{
+    background-color: rgba(17, 39, 98, 0.662);
+    padding: 10px 0px 150px 0px;  /*haut droite bas gauche*/
+}
+#textIntro {
+    padding: 0px 20%;
+}
+#lesLivres{
+    display: flex;  /*pour aligner les photos*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.imageLivre h4{
+    font-family: 'Advent Pro', cursive;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 23px;
+    font-weight: 500;
+}
+.imageLivre img{
+    border-radius: 10px; /*angle*/
+    box-shadow: 5px 6px 3px black;
+}
+.imageLivre img:hover {   /*quand la souris survole l'image*/
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+/* **************************FOOTER****************** */
+footer{
+    background-color: rgb(13, 45, 87);
+    color:rgb(154, 206, 141);
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+form{
+    margin: 0 auto;  /*centre la section avec auto*/
+    max-width: 900px; /*pour limiter l'agranssiment du form quand on agrandi la page */
+}
+input,textarea, button{
+    border:none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px;
+    font-size: 0.8em;
+    font-family:'Advent Pro', cursive;
+    border-radius: 8px;
+}
+textarea{
+    height: 120px;
+}
+button{
+    font-size: 1.3em;
+    background-color: rgb(189, 218, 182); 
+}
+button:hover{
+    background-color: green;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#deuxiemeTrait{
+    height: 1px;
+    width: 75%; /*largeur*/
+    background-color: rgb(154, 206, 141);
+    margin: 60px auto; /*en haut en bas 60px et a droite gauche c'est au milieu*/
+}
+#copyrightEtIcons{
+    display: flex; /*tout mettre en ligne*/
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+#copyright{
+    width: 50%;
+    text-align: left;
+    color :rgb(154, 206, 141);
+}
+#icons{
+    width: 50%;
+    text-align: right;
+}
+#icons a{
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 1.5em;
+    color:rgb(154, 206, 141);
+}
+#icons a:hover{
+    transform: scale(1.5);
+    transition:0.1s;
+}
